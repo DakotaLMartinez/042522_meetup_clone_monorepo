@@ -1,4 +1,4 @@
-class RsvpsController < ApplicationController
+class Api::RsvpsController < ApplicationController
   before_action :set_rsvp, only: [:update, :destroy]
   before_action :authorize_user, only: [:update, :destroy]
   
