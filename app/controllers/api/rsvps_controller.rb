@@ -24,7 +24,7 @@ class Api::RsvpsController < ApplicationController
 
   def authorize_user
     return if current_user.admin? || @rsvp.user == current_user
-    render json: { "You are not permitted to perform that action." }, status: :forbidden
+    render json: { errors: "You are not permitted to perform that action." }, status: :forbidden
   end
 
   def rsvp_params
